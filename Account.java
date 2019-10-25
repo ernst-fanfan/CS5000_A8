@@ -1,3 +1,4 @@
+import java.util.Date;
 public class Account{
     private int id = 0;//Account number
     private double balance = 0.0;//Account current balance
@@ -5,19 +6,20 @@ public class Account{
     private Date dateCreated;//Date created
 
     public Account() {//Non-Argument constructor
-        java.util.Date date = new java.util.Date();
+        Date date = new Date();
     }
     public Account(int id, double balance){//constructor
         this.id = id;
         this.balance = balance;
-        java.util.Date date = new java.util.Date();
+        dateCreated = new Date();
     }
 
     //fetch methods
     public int getId(){return id;}//ID fetch
     public double getBalance(){return balance;}//current balance fetch
     public double getAnnualInterestRate(){return annualInterestRate;}//Interest rate fetch
-    public Date getDateCreated(){return dateCreated;}//date fetch
+    public String getDateCreated(){
+        return dateCreated.toString();}//date fetch
     public double getMonthlyInterestRate(){//monthly rates fetch
         return ((annualInterestRate/12)*100);
     }
