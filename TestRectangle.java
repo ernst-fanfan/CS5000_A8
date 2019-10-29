@@ -36,12 +36,25 @@ public class TestRectangle {
                 manipulate(hisRectangle);
         }
     }
+    //data validation
+    public static double datavalidation(){
+        //init & Decl
+        Scanner inputDouble = new Scanner;
+        double number = 0;
+        while (number <= 0){
+         number = inputDouble.nextDouble();
+         if (number <= 0)
+             System.out.println("\t \t Invalid entree!\n\t \tTry again:\t");
+        }
+    }
 
     //manipulate rectangles
     public static void manipulate(Rectangle rectangle){
         //set with
+        System.out.println("Set width:\t");
         rectangle.setWidth(datavalidation());
         //set height
+        System.out.println("Set height:\t");
         rectangle.setHeight(datavalidation());
         //call testmethods
         testMethods(rectangle);
