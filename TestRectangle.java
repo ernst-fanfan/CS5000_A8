@@ -39,13 +39,14 @@ public class TestRectangle {
     //data validation
     public static double datavalidation(){
         //init & Decl
-        Scanner inputDouble = new Scanner;
+        Scanner inputDouble = new Scanner(System.in);
         double number = 0;
         while (number <= 0){
          number = inputDouble.nextDouble();
          if (number <= 0)
              System.out.println("\t \t Invalid entree!\n\t \tTry again:\t");
         }
+        return number;
     }
 
     //manipulate rectangles
