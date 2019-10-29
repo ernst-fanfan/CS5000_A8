@@ -1,3 +1,10 @@
+//Class: CS 5000
+//Term: Fall 2019
+//Name: Ernst Fanfan
+//Instructor: Dr. Haddad
+//Assignment: 8
+//IDE Name: IntelliJ
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
