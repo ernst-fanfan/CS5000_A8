@@ -30,7 +30,23 @@ public class TestRectangle {
             //data validation
             if (choice < 1 || choice > 3)
                 System.out.println("\t \tinvalid entree\n");
+            else if(choice == 1)
+                manipulate(myRectangle);
+            else if (choice == 2)
+                manipulate(hisRectangle);
         }
+    }
+
+    //manipulate rectangles
+    public static void manipulate(Rectangle rectangle){
+        //set with
+        rectangle.setWidth(datavalidation());
+        //set height
+        rectangle.setHeight(datavalidation());
+        //call testmethods
+        testMethods(rectangle);
+        //display relevant inf about rectangle
+        System.out.println(rectangle.toString());
     }
 
     //Test Rectangle methods

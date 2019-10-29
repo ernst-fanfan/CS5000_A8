@@ -31,6 +31,12 @@ public class Rectangle {
     public void setName(String name){//to set name to make it easier for the toString later on
         this.name = name;
     }
+    public void setWidth(double width){
+        this.width = width;
+    }
+    public void setHeight(double height){
+        this.height = height;
+    }
 
     public String toString(){//passes relevant info about rectangle
         return "Rectangle "+name+" is "+width+" units wide and "+height+" units high.";
