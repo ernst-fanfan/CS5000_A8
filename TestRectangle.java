@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class TestRectangle {
     public static void main (String [] args){
@@ -11,6 +12,25 @@ public class TestRectangle {
         testMethods(myRectangle);
         testMethods(hisRectangle);
         testMethods(herRectangle);
+
+        //testing toString
+        System.out.println(myRectangle.toString());
+        System.out.println(hisRectangle.toString());
+        System.out.println(herRectangle.toString());
+        System.out.println();
+
+        //interactive loop
+        int choice = 0;
+        Scanner inputInt = new Scanner(System.in);
+        while (choice != 3){
+            //prompt
+            System.out.println("Chose an option:\n\t1.\tmyRectangle\n\t2.\thisRectangle\n\t3.\tExit");
+            //Scan
+            choice = inputInt.nextInt();
+            //data validation
+            if (choice < 1 || choice > 3)
+                System.out.println("\t \tinvalid entree\n");
+        }
     }
 
     //Test Rectangle methods
