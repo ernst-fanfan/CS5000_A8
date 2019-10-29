@@ -11,6 +11,9 @@ public class Rectangle {
     }
 
     //Get methods
+    public String getName() {
+        return name;
+    }
     public double getHeight() {//passes height
         return height;
     }
@@ -22,6 +25,11 @@ public class Rectangle {
     }
     public double getPerimeter(){//passes perimeter of rectangle
         return 2*(height+width);
+    }
+
+    //set methods
+    public void setName(String name){//to set name to make it easier for the toString later on
+        this.name = name;
     }
 
     public String toString(){//passes relevant info about rectangle
