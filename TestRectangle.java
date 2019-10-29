@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TestRectangle {
@@ -65,12 +66,13 @@ public class TestRectangle {
 
     //Test Rectangle methods
     public static void testMethods(Rectangle rectangle){
+        DecimalFormat numFormat = new DecimalFormat("###,###,##0.00");
         System.out.println(rectangle.getName()+":");
         System.out.println("-------------");
-        System.out.printf("Width:\t \t"+"%.2f%n",rectangle.getWidth());
-        System.out.printf("Height:\t \t"+"%.2f%n",rectangle.getHeight());
-        System.out.printf("Area:\t \t"+"%.2f%n",rectangle.getArea());
-        System.out.printf("Perimeter:\t"+"%.2f%n",rectangle.getPerimeter());
+        System.out.println("Width:\t \t"+numFormat.format(rectangle.getWidth()));
+        System.out.println("Height:\t \t"+numFormat.format(rectangle.getHeight()));
+        System.out.println("Area:\t \t"+numFormat.format(rectangle.getArea()));
+        System.out.println("Perimeter:\t"+numFormat.format(rectangle.getPerimeter()));
         System.out.println();
     }
 }

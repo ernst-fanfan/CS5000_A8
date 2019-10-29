@@ -1,7 +1,11 @@
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+
 public class Rectangle {
     private String name;
     private double width = 2.00;
     private double height = 2.00;
+    DecimalFormat numFormat = new DecimalFormat("###,###,##0.00");
 
     public Rectangle(){}//non arguments constructor
     public Rectangle(String name, double with, double height){//constructor with arguments
@@ -39,6 +43,6 @@ public class Rectangle {
     }
 
     public String toString(){//passes relevant info about rectangle
-        return "Rectangle "+name+" is "+width+" units wide and "+height+" units high.";
+        return "Rectangle "+name+" is "+numFormat.format(width)+" units wide and "+numFormat.format(height)+" units high.";
     }
 }
