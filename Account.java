@@ -26,14 +26,14 @@ public class Account{
     //fetch methods
     public int getId(){return id;}//ID fetch
     public double getBalance(){return balance;}//current balance fetch
-    public double getAnnualInterestRate(){return annualInterestRate*100;}//Interest rate fetch
+    public double getAnnualInterestRate(){return annualInterestRate;}//Interest rate fetch
     public String getDateCreated(){
         return dateCreated.toString();}//date fetch
     public double getMonthlyInterestRate(){//monthly rates fetch
-        return ((annualInterestRate/12)*100);
+        return ((annualInterestRate/12));
     }//monthly interest rate
     public double getMonthlyInterest(){
-        return (balance*annualInterestRate);
+        return (balance*getMonthlyInterestRate());
     }//monthly calculate interest
 
     //set methods
@@ -56,9 +56,9 @@ public class Account{
     }//increase balance
 
     //to String method
-    public String toString (Account account){//relevant account info
+    public String toString (){//relevant account info
         DecimalFormat dollar = new DecimalFormat("$###,##0.00");
         DecimalFormat percent = new DecimalFormat("#0.00%");
-        return ("Account ID:\t \t \t"+id+"\nAccount Balance:\t \t"+dollar.format(balance)+"\nInterest Rate:\t \t \t"+percent.format(getAnnualInterestRate())+"\nDate Opened:\t \t \t"+getDateCreated());
+        return ("Account ID:\t \t \t \t"+id+"\nAccount Balance:\t \t"+dollar.format(balance)+"\nInterest Rate:\t \t \t"+percent.format(getAnnualInterestRate())+"\nDate Opened:\t \t \t"+getDateCreated());
     }
 }
