@@ -20,9 +20,13 @@ public class TestAccount {
         System.out.println("\n"+myObject);//test toString
 
         //todo add interactive loop
-        int choice = 0;
+        //Init & Decl
+        Account myAccount = new Account();
+        Account yourAccount = new Account();
         Scanner inputInt = new Scanner(System.in);
-        while (choice != 3){
+        int choice = 0;
+
+        while (choice != 3){//sentinel
             //prompt
             System.out.println("Chose an option:\n\t1.\tmyAccount\n\t2.\tyourAccount\n\t3.\tExit");
             //Scan
@@ -31,9 +35,27 @@ public class TestAccount {
             if (choice < 1 || choice > 3)
                 System.out.println("\t \tinvalid entree\n");
             else if(choice == 1)
-                //manipulate(myRectangle);
+                manipulate(myAccount);
             else if (choice == 2)
-                //manipulate(hisRectangle);
+                manipulate(yourAccount);
         }
+    }
+
+    //data validation
+    public static double datavalidation() {
+        //init & Decl
+        Scanner inputDouble = new Scanner(System.in);
+        double number = 0;
+        while (number <= 0) {
+            number = inputDouble.nextDouble();
+            if (number <= 0)
+                System.out.println("\t \t Invalid entree!\n\t \tTry again:\t");
+        }
+        return number;
+    }
+
+    //manipulate rectangles
+    public static void manipulate(Account account){
+
     }
 }
