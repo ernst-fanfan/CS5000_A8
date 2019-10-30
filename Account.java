@@ -15,7 +15,7 @@ public class Account{
     private Date dateCreated;//Date created
 
     public Account() {//Non-Argument constructor
-        Date date = new Date();
+        dateCreated = new Date();
     }
     public Account(int id, double balance){//constructor
         this.id = id;//account ID

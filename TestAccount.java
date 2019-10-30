@@ -28,7 +28,7 @@ public class TestAccount {
 
         while (choice != 3){//sentinel
             //prompt
-            System.out.println("Chose an option:\n\t1.\tmyAccount\n\t2.\tyourAccount\n\t3.\tExit");
+            System.out.println("\nChose an option:\n\t1.\tmyAccount\n\t2.\tyourAccount\n\t3.\tExit");
             //Scan
             choice = inputInt.nextInt();
             //data validation
@@ -56,6 +56,45 @@ public class TestAccount {
 
     //manipulate rectangles
     public static void manipulate(Account account){
-
+        int option = 0;
+        while (option != 7){
+            option = 7;
+            switch (option) {
+                case 1:
+                    account.setId((int) (datavalidation()));
+                    System.out.println(account);
+                    break;
+                case 2:
+                    account.setAnnualInterestRate(datavalidation());
+                    System.out.println(account);
+                    break;
+                case 3:
+                    account.setBalance(datavalidation());
+                    System.out.println(account);
+                    break;
+                case 4:
+                    System.out.println("Account ID:\t" + account.getId());
+                    System.out.println("Annual Interest rate:\t" + account.getAnnualInterestRate());
+                    System.out.println("Monthly Intrest Rate:\t" + account.getMonthlyInterestRate());
+                    System.out.println("This months interest:\t" + account.getMonthlyInterest());
+                    System.out.println("Account Balance:\t" + account.getBalance());
+                    System.out.println("Date Created:\t" + account.getDateCreated());
+                    System.out.println("********************");
+                    System.out.println(account);
+                    break;
+                case 5:
+                    System.out.println("How much to withdraw:\t");
+                    account.withdraw(datavalidation());
+                    System.out.println(account);
+                    break;
+                case 6:
+                    System.out.println("How uch to deposit:\t");
+                    account.deposit(datavalidation());
+                    System.out.println(account);
+                    break;
+                case 7:
+                    System.out.println("Main Menu");
+            }
+        }
     }
 }
